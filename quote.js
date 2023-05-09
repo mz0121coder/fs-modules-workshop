@@ -7,8 +7,8 @@ const quotes = [];
 export async function addQuote(quoteText) {
 	// generate random quote with unique id
 	const quote = { id: uuidv4(), quoteText: quoteText };
-
-	const data = JSON.parse(await fs.readFile(fileName, 'utf-8'));
+    const read = await fs.readFile(fileName, 'utf-8')
+	const data = JSON.parse(read);
 
 	const newQuotes = [...data, quote];
 
@@ -20,6 +20,9 @@ export async function addQuote(quoteText) {
 	return quote;
 }
 addQuote('Five four three two one');
+// addQuote('Testing 1');
+// addQuote('Testing 2');
+// addQuote('Testing 3');
 // addQuote('TEST2');
 
 export async function getQuotes() {
@@ -27,7 +30,14 @@ export async function getQuotes() {
 	return JSON.parse(await fs.readFile(fileName, 'utf-8'));
 }
 
-export async function getRandomQuote() {}
+export async function getRandomQuote() {
+    const data = await fs.readFile(fileName, 'utf-8')
+    const allQuotes = JSON.parse(data)
+    let randomQuote = Math.floor(Math.random()*allQuotes.length)
+    console.log(randomQuote)
+    return allQuotes[randomQuote] 
+}
+console.log(getRandomQuote())
 
 export async function editQuote(id, quoteText) {}
 

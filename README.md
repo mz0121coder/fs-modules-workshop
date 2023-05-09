@@ -79,13 +79,13 @@ const fileName = "quotes.json";
 
 <br>
 
-### 🎫 Ticket 2b - Add/save a new quote
+### 🎫 Ticket 2b - Add/save a new quote ✅
 
 Inside `quote.js` find the `addQuote` function.
 
 The function should:
 
-- take in quoteText (String)
+- take in quoteText (String) 
 - create a quote object
 - assign a unique id to the quote object (using a v4 uuid)
 - read/parse all quote objects from `quotes.json`
@@ -111,15 +111,15 @@ If all tests pass, commit your work and move on to the next ticket. ✔️
 
 <br>
 
-### 🎫 Ticket 2c - Get all quotes
+### 🎫 Ticket 2c - Get all quotes ✅
 
 Inside `quote.js` find the `getQuotes` function.
 
 The function should:
 
-- not take in any arguments
-- read/parse all quote objects from `quotes.json`
-- return an array of all existing quote objects
+- not take in any arguments ✅
+- read/parse all quote objects from `quotes.json` ✅
+- return an array of all existing quote objects ✅
 
 🧪 This ticket has an automated test. Once you think your solution works run the following command:
 
@@ -137,9 +137,9 @@ Inside `quote.js` find the `getRandomQuote` function.
 
 The function should:
 
-- not take in any arguments
-- read/parse all quote objects from `quotes.json`
-- return a single randomly selected quote object
+- not take in any arguments ✅
+- read/parse all quote objects from `quotes.json` ✅
+- return a single randomly selected quote object 
 
 🧪 This ticket has an automated test. Once you think your solution works run the following command:
 
