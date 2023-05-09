@@ -24,6 +24,7 @@ addQuote('Five four three two one');
 
 export async function getQuotes() {
 	// read all quotes
+	return JSON.parse(await fs.readFile(fileName, 'utf-8'));
 }
 
 export async function getRandomQuote() {}
